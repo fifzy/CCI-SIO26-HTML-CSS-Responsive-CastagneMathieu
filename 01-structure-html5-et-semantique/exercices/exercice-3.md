@@ -36,3 +36,7 @@
 | S2. Ports courants d'un serveur web | `ul` + `li` | Les ports sont énumérés sans ordre particulier. (Remarque : seuls 80/HTTP et 443/HTTPS sont des ports web ; 22 sert à SSH et 25 à SMTP.) |
 | S3. Avertissement « Ne jamais exécuter cette commande en production » | `p` + `strong` | C'est un avertissement : son contenu a une importance forte, ce qu'exprime `strong`. |
 | S4. Insister sur « avant » dans « Sauvegardez avant de modifier » | `em` (autour du seul mot « avant ») | On met l'accent sur un mot pour en changer l'intonation, ce qui est le rôle de `em`. |
+
+## Remarque
+
+Le fichier `exercice-3-corrige.html` contient plusieurs `h1`, car il regroupe cinq extraits indépendants. Chaque extrait représente une page à part entière ; dans un vrai document, il n'y aurait qu'un seul `h1`.
