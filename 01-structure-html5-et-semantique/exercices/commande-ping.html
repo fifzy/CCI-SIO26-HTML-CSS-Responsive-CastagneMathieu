@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La commande ping</title>
-</head>
+  </head>
+  <body>
+    <!-- Mathieu Castagné -->
+    <h1>La commande ping</h1>
+    <p>La commande ping permet de vérifier qu'un appareil est joignable sur le réseau, à partir de son adresse IP ou d'un nom de domaine. Elle utilise le protocole ICMP : elle envoie une requête ping à l'appareil et attend sa réponse. Elle affiche le temps de réponse de chaque échange, et elle affiche le nombre de paquets perdus et reçus.</p>
 
-<body>
-  <!-- Mathieu Castagné -->
-  <h1>La commande ping sous Linux</h1>
-  <p>La commande ping permet de vérifier qu'un appareil est joignable sur le réseau, à partir de son adresse IP ou d'un nom de domaine. Elle utilise le protocole ICMP : elle envoie une requête ping à l'appareil et attend sa réponse.
-    Elle affiche le temps de réponse de chaque échange, et elle affiche le nombre de paquets perdus et reçus.</p>
-  <h2>Syntaxe</h2>
-  <p>La commande s'écrit sous la forme <code>ping [options] &lt;destination&gt;</code>.
-    Les options entre crochets sont facultatives, et la destination est obligatoire : il s'agit de l'adresse IP ou du nom de domaine de l'appareil à tester,
-    par exemple <code>ping 192.168.1.1</code> ou <code>ping google.com</code>.</p>
-  <h2>Options courantes</h2>
-  <ul>
-    <li><code>-c nombre</code> (count) : envoie un nombre précis de paquets puis s’arrête. Sous Linux, ping tourne à l’infini par défaut, donc <code>-c 4</code> évite de devoir faire Ctrl+C.</li>
-    <li><code>-i intervalle</code> : définit le délai en secondes entre chaque paquet (1 s par défaut). Par exemple <code>-i 0.5</code> envoie deux paquets par seconde. Les intervalles très courts sont réservés à root.</li>
-    <li><code>-s taille_paquet</code> : fixe la taille des données envoyées dans chaque paquet (56 octets par défaut, soit 64 octets avec l’en-tête ICMP). C’est utile pour tester le comportement du réseau avec de gros paquets, par exemple pour trouver la MTU en le combinant avec <code>-M do</code>.</li>
-    <li><code>-p motif</code> : remplit les données du paquet avec un motif hexadécimal choisi (jusqu’à 16 octets, par exemple <code>-p ff00</code>). Cela sert à diagnostiquer des problèmes qui ne se produisent qu’avec certaines données, comme un équipement défaillant qui corrompt certains bits.</li>
-  </ul>
-</body>
+    <h2>Syntaxe</h2>
+    <p>La commande sous Linux s'écrit sous la forme <code>ping [options] &lt;destination&gt;</code>. Les options entre crochets sont facultatives, et la destination est obligatoire : il s'agit de l'adresse IP ou du nom de domaine de l'appareil à tester, par exemple <code>ping 192.168.1.1</code> ou <code>ping google.com</code>.</p>
 
+    <h2>Options courantes</h2>
+    <ul>
+      <li><code>-c nombre</code> (count) : envoie un nombre précis de paquets puis s'arrête. Sous Linux, ping tourne à l'infini par défaut, donc <code>-c 4</code> évite de devoir faire Ctrl+C.</li>
+      <li><code>-i intervalle</code> : définit le délai en secondes entre chaque paquet (1 s par défaut). Par exemple, <code>-i 0.5</code> envoie deux paquets par seconde. Les intervalles très courts sont réservés à root.</li>
+      <li><code>-s taille_paquet</code> : fixe la taille des données envoyées dans chaque paquet (56 octets par défaut, soit 64 octets avec l'en-tête ICMP). C'est utile pour tester le comportement du réseau avec de gros paquets, par exemple pour trouver la MTU en le combinant avec <code>-M do</code>.</li>
+      <li><code>-p motif</code> : remplit les données du paquet avec un motif hexadécimal choisi (jusqu'à 16 octets, par exemple <code>-p ff00</code>). Cela sert à diagnostiquer des problèmes qui ne se produisent qu'avec certaines données, comme un équipement défaillant qui corrompt certains bits.</li>
+    </ul>
+
+    <h2>Utilisation pas à pas</h2>
+    <ol>
+      <li>Ouvrir un terminal.</li>
+      <li>Taper <code>ping -c 4 &lt;destination&gt;</code>, en remplaçant la destination par l'adresse IP ou le nom de domaine à tester.</li>
+      <li>Attendre les réponses et observer le temps de réponse de chacune.</li>
+      <li>Interpréter le bilan final en fonction du pourcentage de paquets perdus.</li>
+    </ol>
+    <p><strong>Attention : un ping sans réponse ne prouve pas que l'appareil est éteint, car un pare-feu peut bloquer les requêtes ICMP.</strong></p>
+
+    <h3>Tester le réseau local</h3>
+    <p>Pour vérifier la connexion au réseau local, on teste la passerelle par défaut, souvent la box ou le routeur : <code>ping -c 4 192.168.1.1</code>. Si elle répond, l'ordinateur est bien connecté au réseau local.</p>
+
+    <h3>Tester Internet</h3>
+    <p>On teste d'abord une adresse IP publique, par exemple <code>ping -c 4 8.8.8.8</code>, puis un nom de domaine, par exemple <code>ping -c 4 google.com</code>. Si l'adresse IP répond mais pas le nom de domaine, l'accès à Internet fonctionne, mais la résolution DNS est en panne.</p>
+  </body>
 </html>
