@@ -1,0 +1,11 @@
+p { color: black; font-size: 16px; }
+.texte { color: blue; }
+div p { color: green; }
+.intro { color: orange; font-size: 20px; }
+p.texte { font-weight: bold; }
+.texte { font-weight: normal; }
+p#special { color: purple; }
+p { color: gray; }
+h1 { color: red; }
+.titre { color: navy; }
+.conteneur { color: brown; }
