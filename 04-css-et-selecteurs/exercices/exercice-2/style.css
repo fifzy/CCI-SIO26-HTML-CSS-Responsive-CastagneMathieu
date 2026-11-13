@@ -1,0 +1,28 @@
+/* 1. Tous les paragraphes en gris foncé */
+p {
+    color: #444;
+}
+
+/* 2. Tous les éléments portant la classe « important », quel que soit leur type, en gras. */
+ .important {
+    font-weight: bold;
+ }
+
+/* 3. L'en-tête d'identifiant « entete » avec un fond bleu foncé */
+#entete {
+    background-color: #1f3a5f;
+}
+/* 4. Les titres h1 et h2 en une seule règle : police sans empattement.*/
+h1, h2 {
+    font-family: sans-serif;
+
+}
+
+/* 5. Uniquement les paragraphes « important » en rouge (pas l'élément de la liste).*/
+ p.important {
+    color: red;
+}
+/* 6. Uniquement le lien de classe « actif » en orange */
+a.actif{
+  color : orange;
+}
