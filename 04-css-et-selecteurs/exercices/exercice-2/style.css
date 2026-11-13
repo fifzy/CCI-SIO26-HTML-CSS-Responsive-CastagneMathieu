@@ -26,3 +26,15 @@ h1, h2 {
 a.actif{
   color : orange;
 }
+/* 7. Uniquement le paragraphe du pied de page en taille réduite */
+footer p {
+    font-size: 14px;
+}
+/* 8. Uniquement les éléments de liste de la section « agenda » en vert */
+#agenda li {
+    color: green;
+}
+/* 9. Uniquement l'élément qui a les classes « important » et « rappel » en italique */
+.important.rappel {
+    font-style: italic;
+}
