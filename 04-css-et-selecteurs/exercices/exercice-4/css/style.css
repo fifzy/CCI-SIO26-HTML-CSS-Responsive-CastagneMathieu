@@ -1,0 +1,29 @@
+/* Cause 2 : le h1 porte un identifiant, pas une classe */
+#titre-page {
+    font-size: 2.5rem;
+}
+
+/* Cause 3 : point-virgule manquant après red */
+.alerte {
+    color: red;
+    font-weight: bold;
+}
+
+/* Cause 4 : propriété mal orthographiée (colour) */
+.info {
+    color: green;
+}
+
+.liste-services li {
+    color: gray;
+}
+
+/* Cause 5 : .actif (0, 1, 0) perdait face à .liste-services li (0, 1, 1) */
+.liste-services .actif {
+    color: green;
+}
+
+/* Cause 6 : pas d'espace entre le nombre et l'unité */
+.lien {
+    font-size: 1.2rem;
+}
