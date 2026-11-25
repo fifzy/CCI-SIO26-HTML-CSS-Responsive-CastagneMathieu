@@ -1,0 +1,40 @@
+body {
+    background-color: #333333;
+    color: #444444;
+    font-family: "Papyrus";
+    font-size: 10px;
+    line-height: 1;
+}
+
+h1 {
+    color: #ffff00;
+    background-color: #ffffff;
+    font-size: 12px;
+    text-align: right;
+}
+
+h2 {
+    color: #555555;
+    font-size: 11px;
+}
+
+p {
+    color: #999999;
+    background-color: #ffffff;
+    font-size: 9px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+a {
+    color: #555555;
+}
+
+.alerte {
+    color: #ff7f00;
+    background-color: #ff0000;
+}
+
+footer p {
+    color: #3a3a3a;
+}
