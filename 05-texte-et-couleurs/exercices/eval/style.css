@@ -1,0 +1,44 @@
+body {
+    background-color: #fafafa;
+    color: #1a1a1a;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.125rem;
+}
+
+h1{
+  text-align: center;
+  font-size: 2.5rem;
+  color: rgb(5, 31, 150);
+
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(212, 85%, 19%);
+}
+
+.reference {
+  font-style: italic;
+  color: #555555;
+}
+
+.option {
+  font-weight: bold;
+}
+
+.prix{
+  text-align: center;
+  font-size: 2em;
+  color: #b00020;
+}
+
+.avertissement{
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
+}
